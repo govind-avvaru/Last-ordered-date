@@ -27,7 +27,7 @@ class Orderplaceafter implements ObserverInterface
 
       $customerdata = $this->customerRepository->getById($ orderdata ->getData('customer_id')); 
 
-      $value= $orderdata->getCreatedAt(); 
+      $value= '09/03/2022'; 
 
       $customerdata->setCustomAttribute('last_order_date', $value); 
 
