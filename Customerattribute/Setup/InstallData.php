@@ -59,7 +59,7 @@ class InstallData implements InstallDataInterface
         // The types are supported as: datetime, decimal, int, text, varchar
         // The sort order will be position this attribute will be displayed
         // We add this attribute before the Email field so I set it to 79
-        $customerSetup->addAttribute(Customer::ENTITY, 'Last_ordered_date', [
+        $customerSetup->addAttribute(Customer::ENTITY, 'last_order_date', [
             'type' => 'datetime',
             'label' => 'Last Ordered Date',
             'input' => 'date',
@@ -75,7 +75,7 @@ class InstallData implements InstallDataInterface
             'visible_on_front' => true
         ]);
 
-        $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'Last_ordered_date')
+        $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'last_order_date')
         ->addData([
             'attribute_set_id' => $attributeSetId,
             'attribute_group_id' => $attributeGroupId,
